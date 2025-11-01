@@ -33,6 +33,21 @@
       </nav>
     </header>
     <!-- Main content -->
+    <div class="container section">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h1 class="display-6">Instructions</h1>
+                      <p><h3>The Essential Mathematics Quiz <br><br> Welcome to the quiz! <br><br> Click on Play to start, then answer the questions that appear. Select one answer out of 4 choices. The 
+right answer generates 10 points, while there are no points for an incorrect answer. 
+After you have completed the quiz, the High Score section shows the number of times a participant scored above 5 
+points. To check how you scored, you can enter your username and save it in the input box. You also have the option to 
+start the quiz again.
+You can also click the buttons at the top left, i.e. Home, Start Game, High Scores and End Game to move through the quiz sections.</h3></p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
 
     <div class="container">
       <div id="home" class="flex-center flex-column">
@@ -44,11 +59,65 @@
 
     <hr>
     
+    <!-- Game -->
+<div class="container">
+      <div id="loader"></div>
+      <div id="game" class="justify-center flex-column hidden">
+        <div id="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">
+              Question
+            </p>
+            <div id="progressBar">
+              <div id="progressBarFull"></div>
+            </div>
+          </div>
+          <div id="hud-item">
+            <p class="hud-prefix">
+              Score
+            </p>
+            <h1 class="hud-main-text" id="score">
+              0
+            </h1>
+          </div>
+        </div>
+        <h2 id="question"></h2>
+        <div class="choice-container">
+          <p class="choice-prefix">A</p>
+          <p class="choice-text" data-number="1"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">B</p>
+          <p class="choice-text" data-number="2"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">C</p>
+          <p class="choice-text" data-number="3"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">D</p>
+          <p class="choice-text" data-number="4"></p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
 
+    <!-- Instructions script -->
+    <script src="assets/js/index.js"></script>
+    <!-- Start game script -->
+    <script src="assets/js/game.js"></script>
+    <!-- High score script -->
+    <script src="assets/js/highscores.js"></script>
+    <!-- End game script -->
+    <script src="assets/js/end.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- Redirect script -->
+    <script src="assets/js/redirector.js"></script>
    <!-- Code injected by live-server -->
 <script>
 	// <![CDATA[  <-- For SVG support

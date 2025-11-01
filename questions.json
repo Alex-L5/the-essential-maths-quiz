@@ -1,0 +1,25 @@
+{
+    "question": "What Greek letter is used to signify summation?",
+    "choice1": "Sigma",
+    "choice2": "Delta",
+    "choice3": "Alpha",
+    "choice4": "Omega",
+    "answer": 1
+  },
+  {
+    "question":
+      "Which of the following dice is not a platonic solid?",
+    "choice1": "12-sided die",
+    "choice2": "20-sided die",
+    "choice3": "10-sided die",
+    "choice4": "8-sided die",
+    "answer": 3
+  },
+  {
+    "question": " How many books are in Euclides Elements of Geometry?",
+    "choice1": "8",
+    "choice2": "10",
+    "choice3": "17",
+    "choice4": "13",
+    "answer": 4
+  }

@@ -11,6 +11,7 @@
     <meta name="keywords"
         content="quiz, knowledge, games, puzzles, trivia">
     <!-- Link to css stylesheet -->
+    <title>Quiz - Play</title>
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/game.css">
     <!-- Favicon to appear on browser tab // Quiz icon created by Freepik - Flaticon-->
@@ -21,11 +22,13 @@
 </head>
 
 <body>
+  <!-- Header -->
     <header>
      <nav>
         <ul id="menu">
-            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="game.html">Game</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html" class="active">Game</a></li>
             <li><a href="highscores.html">High Scores</a></li>
             <li><a href="end.html">End Game</a></li>
         </ul>
@@ -33,12 +36,55 @@
     </header>
     <!-- Main content -->
     <div class="container">
-        <div id="home" class="flex-center flex-column">
+      <div id="home" class="flex-center flex-column">
         <h1>Quiz Time!</h1> 
         <a class="btn" href="/game.html">Play</a>
         <a class="btn" href="/highscores.html">High Scores</a>
       </div>    
     </div>  
-    
-</body>
+    <!-- Game -->
+  <div class="container">
+      <div id="loader"></div>
+      <div id="game" class="justify-center flex-column hidden">
+        <div id="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">
+              Question
+            </p>
+            <div id="progressBar">
+              <div id="progressBarFull"></div>
+            </div>
+          </div>
+          <div id="hud-item">
+            <p class="hud-prefix">
+              Score
+            </p>
+            <h1 class="hud-main-text" id="score">
+              0
+            </h1>
+          </div>
+        </div>
+        <h2 id="question"></h2>
+        <div class="choice-container">
+          <p class="choice-prefix">A</p>
+          <p class="choice-text" data-number="1"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">B</p>
+          <p class="choice-text" data-number="2"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">C</p>
+          <p class="choice-text" data-number="3"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">D</p>
+          <p class="choice-text" data-number="4"></p>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/game.js"></script>
+    <!-- Redirect script -->
+    <script src="assets/js/redirector.js"></script>
+  </body>
 </html>

@@ -1,4 +1,5 @@
-{
+[ 
+  {
     "question": "What Greek letter is used to signify summation?",
     "choice1": "Sigma",
     "choice2": "Delta",
@@ -23,3 +24,4 @@
     "choice4": "13",
     "answer": 4
   }
+]  

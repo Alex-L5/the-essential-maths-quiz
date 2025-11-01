@@ -4,37 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Meta tags for SEO -->
     <meta name="description"
-        content="Mathematics Quiz to test your knowledge!">
+        content="Mathematics Quiz to test your knowledge! Perfect for casual gamers and enthusiasts">
     <meta name="keywords"
         content="quiz, knowledge, games, puzzles, trivia">
-    <!-- Link to css stylesheet -->
-    <title>Quiz - Play</title>
+    <title>The Essential Mathematics Quiz</title>
+     <!-- Link to css stylesheet -->
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/game.css">
     <!-- Favicon to appear on browser tab // Quiz icon created by Freepik - Flaticon-->
     <link rel="shortcut icon" href="assets/images/bg-img.png" type="image/x-icon">
-    <title>The Essential Mathematics Quiz</title>
-    <!-- Imported FontAwesome icons -->
-    <script src="https://kit.fontawesome.com/13513ab6ba.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <!-- Header -->
     <header>
-     <nav>
-        <ul id="menu">
-            <li><a href="game.html">Game</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="game.html" class="active">Game</a></li>
-            <li><a href="highscores.html">High Scores</a></li>
-            <li><a href="end.html">End Game</a></li>
-        </ul>
-     </nav>
+      <!-- Navigation -->
+      <nav>
+            <ul id="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="game.html">Start Game</a></li>
+                <li><a href="highscores.html">High Scores</a></li>
+                <li><a href="end.html">End Game</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+      </nav>
     </header>
     <!-- Main content -->
+    <div class="container section">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h1 class="display-6">Instructions</h1>
+                      <p><h3>The Essential Mathematics Quiz <br><br> Welcome to the quiz! <br><br> Click on Play to start, then answer the questions that appear. Select one answer out of 4 choices. The 
+right answer generates 10 points, while there are no points for an incorrect answer. 
+After you have completed the quiz, the High Score section shows the number of times a participant scored above 5 
+points. To check how you scored, you can enter your username and save it in the input box. You also have the option to 
+start the quiz again.
+You can also click the buttons at the top left, i.e. Home, Start Game, High Scores and End Game to move through the quiz sections.</h3></p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
     <div class="container">
       <div id="home" class="flex-center flex-column">
         <h1>Quiz Time!</h1> 
@@ -42,8 +56,11 @@
         <a class="btn" href="/highscores.html">High Scores</a>
       </div>    
     </div>  
+
+    <hr>
+    
     <!-- Game -->
-  <div class="container">
+<div class="container">
       <div id="loader"></div>
       <div id="game" class="justify-center flex-column hidden">
         <div id="hud">
@@ -83,7 +100,155 @@
         </div>
       </div>
     </div>
-    <script src="assets/js/game.js"></script>
+
+    <hr>
+
+    <!-- High score -->
+    <div class="container">
+      <div id="highScores" class="flex-center flex-column">
+        <h1 id="finalScore">High Scores</h1>
+        <ul id="highScoresList"></ul>
+        <a class="btn" href="/">Go to Quiz</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- End game -->
+    <div class="container">
+      <div id="end" class="flex-center flex-column">
+        <h1 id="finalScore"></h1>
+        <form>
+          <label for="username">Enter your username:</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+            disabled
+          >
+            Save
+          </button>
+        </form>
+        <a class="btn" href="/game.html">Play Again</a>
+        <a class="btn" href="/">Go Home</a>
+      </div>
+    </div>
     
-  </body>
+    <hr>
+
+  <!-- Footer / contact section -->
+    <!-- mt-auto added to push footer to the bottom of the page -->
+    <footer id="contact">
+        <div class="container section">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h1 class="display-6">Contact us!</h1>
+                </div>
+                <!-- Contact info -->
+                <div class="col-12 col-md-6 col-xl-4">
+                    <h3 class="sub-heading-color">Contact info</h3>
+                    <address>
+                        <strong><i class="fa-solid fa-location-dot"></i>Games Building</strong><br>
+                        234 Games Way<br>
+                        Events City
+                    </address>
+                    <p><i class="fa-solid fa-phone"></i> 012 345 6789<br>
+                        <i class="fa-regular fa-paper-plane"></i> info@essential-maths.co
+                    </p>
+                    <div class="social-links mt-4">
+                        <a href="https://www.instagram.com" target="_blank"
+                            aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"
+                            aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.x.com" target="_blank" aria-label="Visit our X feed (opens in a new tab)"
+                            rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Opening times -->
+                <div class="col-12 col-md-6 col-xl-4">
+                    <h3 class="sub-heading-color">Opening times</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Day</th>
+                                <th scope="col">Open</th>
+                                <th scope="col">Close</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Mon</th>
+                                <td colspan="2">Closed</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tue - Thur</th>
+                                <td>11am</td>
+                                <td>11pm</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fri - Sat</th>
+                                <td>11am</td>
+                                <td>12am</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sun</th>
+                                <td>12pm</td>
+                                <td>7pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Feedback -->
+        <div style="text-align: center;">    
+                <form>
+                    <label for="fname"><h4>First Name:</h4></label>
+                    <input type="text" name="fname" id="fname">
+                    <label for="lname"><h4>Last Name:</h4></label>
+                    <input type="text" name="lname" id="lname">
+                    <label for="email"><h4>Email Address:</h4></label>
+                    <input type="email" name="email" id="email" required>
+                        <button type="submit">
+	                        <strong>Send</strong>
+	                    </button>
+		                    <input type="reset" value="Reset">
+                </form>       
+  	            <form action="https://formdump.codeinstitute.net/" method="post">
+  	                <label for="feedback"><h4>Feedback</h4></label>
+  	                <br>
+  	                <textarea id="feedback" cols="50" rows="10" name="feedback" placeholder="Your Feedback"></textarea>
+  	                <br>
+  	                <input type="submit">
+  	            </form>
+        </div>
+    </footer>
+
+    <!-- Font Awesome kit -->
+    <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+
+    <!-- Instructions script -->
+    <script src="assets/js/index.js"></script>
+    <!-- Start game script -->
+    <script src="assets/js/game.js"></script>
+    <!-- High score script -->
+    <script src="assets/js/highscores.js"></script>
+    <!-- End game script -->
+    <script src="assets/js/end.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- Redirect script -->
+    <script src="assets/js/redirector.js"></script>
+</body>
 </html>

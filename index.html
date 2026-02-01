@@ -11,7 +11,12 @@
     <meta name="keywords"
         content="quiz, knowledge, games, puzzles, trivia">
     <title>The Essential Maths Quiz</title>
-     <!-- Link to css stylesheet -->
+    <!-- Link to css stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+            crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+            family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=rel="stylesheet">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/game.css">
     <!-- Favicon to appear on browser tab // Quiz icon created by Freepik - Flaticon-->
@@ -37,8 +42,8 @@
     <div class="container">
       <div id="home" class="flex-center flex-column">
         <h1>Quiz Time!</h1> 
-        <a class="btn" href="/game.html">Play</a>
-        <a class="btn" href="/highscores.html">High Scores</a>
+        <a class="btn" href="game.html">Play</a>
+        <a class="btn" href="highscores.html">High Scores</a>
       </div>    
     </div>  
 
@@ -93,52 +98,8 @@
 
     <!-- Instructions script -->
     <script src="assets/js/index.js"></script>
-    <!-- Start game script -->
-    <script src="assets/js/game.js"></script>
-    <!-- High score script -->
-    <script src="assets/js/highscores.js"></script>
-    <!-- End game script -->
-    <script src="assets/js/end.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     
-   <!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-</body>
+   </body>
 </html>

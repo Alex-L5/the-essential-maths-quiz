@@ -45,13 +45,17 @@ fetch(
     })
     .catch((err) => {
         console.error(err);
-    });
+        loader.classList.add('hidden');  //
+        game.classList.remove('hidden');
+        question.textContent = "Sorry, we couldn't load questions. 
+            Please try again later.";
+    });                                   //  
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 
-startGame = () => {
+const startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
@@ -60,11 +64,11 @@ startGame = () => {
     loader.classList.add('hidden');
 };
 
-getNewQuestion = () => {
+const getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         //go to the end page
-        return window.location.assign('/end.html');
+        return window.location.assign('end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
@@ -73,11 +77,19 @@ getNewQuestion = () => {
 
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
-    question.innerHTML = currentQuestion.question;
+    question.innerHTML = currentQuestion.question;  //
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
-        choice.innerHTML = currentQuestion['choice' + number];
+        choice.innerHTML = currentQuestion['choice' + number];  //
+    // function decodeHTML(html) {
+    // const txt = document.createElement("textarea");
+    // txt.innerHTML = html;
+    // return txt.value;
+    // }
+    // question.textContent = decodeHTML(currentQuestion.question);
+    // choice.textContent = decodeHTML(currentQuestion['choice' +
+    // number]);
     });
 
     availableQuesions.splice(questionIndex, 1);
@@ -108,7 +120,7 @@ choices.forEach((choice) => {
     });
 });
 
-incrementScore = (num) => {
+const incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
 };

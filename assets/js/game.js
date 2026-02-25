@@ -14,6 +14,13 @@ let availableQuesions = [];
 
 let questions = [];
 
+function decodeHTML(html) {
+    const txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+    }
+    
+
 fetch(
     'https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple'
 )
@@ -80,15 +87,10 @@ const getNewQuestion = () => {
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
-        choice.innerHTML = currentQuestion['choice' + number];  //
-    // function decodeHTML(html) {
-    // const txt = document.createElement("textarea");
-    // txt.innerHTML = html;
-    // return txt.value;
-    // }
-    // question.textContent = decodeHTML(currentQuestion.question);
-    // choice.textContent = decodeHTML(currentQuestion['choice' +
-    // number]);
+        question.textContent = decodeHTML(currentQuestion.question);
+    choice.textContent = decodeHTML(currentQuestion['choice' +
+    number]);
+    
     });
 
     availableQuesions.splice(questionIndex, 1);

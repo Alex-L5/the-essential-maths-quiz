@@ -47,8 +47,7 @@ fetch(
         console.error(err);
         loader.classList.add('hidden');  //
         game.classList.remove('hidden');
-        question.textContent = "Sorry, we couldn't load questions. 
-            Please try again later.";
+        question.textContent = "Sorry, we couldn't load questions. Please try again later.";
     });                                   //  
 
 //CONSTANTS

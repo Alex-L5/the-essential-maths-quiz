@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/game.css">
     <!-- Favicon to appear on browser tab // Quiz icon created by Freepik - Flaticon-->
-    <link rel="shortcut icon" href="assets/images/bg-img.png" type="image/x-icon">
+    <link rel="icon" href="assets/favicon/bg-img.png" type="image/png">
 </head>
 
 <body>
@@ -38,6 +38,18 @@
       </nav>
     </header>
     <!-- Main content -->
+    <button id="instructions-toggle" class="btn" type="button">Show instructions</button>
+    <section id="instructions" class="hidden">
+      <h2>Welcome to the quiz!</h2>
+      <p>How to play: Answer each question and try to get the highest score. Click on Play to start, then answer the questions that appear. Select one answer out of 4 choices. The 
+right answer generates 10 points, while there are no points for an incorrect answer. 
+After you have completed the quiz, the High Score section shows the number of times a participant scored above 5 
+points. To check how you scored, you can enter your username and save it in the input box. You also have the option to 
+start the quiz again.
+You can also click the buttons at the top left, i.e. Home, Start Game, High Scores and End Game to move through the quiz sections.</p>
+    </section>
+
+    <hr>
 
     <div class="container">
       <div id="home" class="flex-center flex-column">

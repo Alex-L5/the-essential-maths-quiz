@@ -100,26 +100,22 @@
         </div>
         <!-- Feedback -->
         <div style="text-align: center;">    
-                <form>
-                    <label for="fname">First Name:</label>
-                    <input type="text" name="fname" id="fname">
-                    <label for="lname">Last Name:</label>
-                    <input type="text" name="lname" id="lname">
-                    <label for="email">Email Address:</label>
-                    <input type="email" name="email" id="email" required>
-                        <button type="submit">
-	                        <strong>Send</strong>
-	                    </button>
-		                    <input type="reset" value="Reset">
-                </form>       
-  	            <form action="https://formdump.codeinstitute.net/" method="post">
-  	                <label for="feedback">Feedback</label>
-  	                <br>
-  	                <textarea id="feedback" cols="50" rows="10" name="feedback" placeholder="Your Feedback"></textarea>
-  	                <br>
-  	                <input type="submit">
-  	            </form>
+                <form id="feedback-form" novalidate>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="feedback">Feedback</label>
+                    <textarea id="feedback" name="feedback" rows="8" required></textarea>
+
+                    <button type="submit">Send feedback</button>
+                    <button type="reset">Reset</button>
+                    <p id="feedback-status" role="status" aria-live="polite"></p>
+                </form>     
         </div>
     </footer>
+    <script src="assets/js/contact.js"></script>
   </body>
 </html>

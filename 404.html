@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found | The Essential Maths Quiz</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <main class="container flex-center flex-column">
+      <h1>Page not found</h1>
+      <p>Sorry, the page you tried to visit does not exist.</p>
+      <p id="redirect-message">You will be returned to the quiz homepage in 5 seconds.</p>
+      <a class="btn" href="/the-essential-maths-quiz/index.html">Go to homepage</a>
+    </main>
+
+    <script>
+      let seconds = 5;
+      const message = document.getElementById("redirect-message");
+
+      const countdown = setInterval(() => {
+        seconds -= 1;
+        message.textContent = `You will be returned to the quiz homepage in ${seconds} seconds.`;
+
+        if (seconds === 0) {
+          clearInterval(countdown);
+          window.location.href = "/the-essential-maths-quiz/index.html";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

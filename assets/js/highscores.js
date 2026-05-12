@@ -1,14 +1,24 @@
-const highScoresList = document.getElementById("highScoresList"); // get a reference to the highscores list
-const highScores = JSON.parse(localStorage.getItem("highScores")) || []; // get the unordered list out of local storage, or empty array
-// console.log(highscores)                                 // check the command result is correct
+const highScoresList = document.getElementById("highScoresList");
+const clearScoresBtn = document.getElementById("clearScoresBtn");
 
-highScoresList.innerHTML = highScores               //add ordered list to each unordered list
-  .map(score => {
-    return `<li class="high-score">${score.name} - ${score.score}</li>`;
-  })
-  .join("");
+function getHighScores() {
+  return JSON.parse(localStorage.getItem("highScores")) || [];
+}
 
-  function resethighScores() {
-     document.getElementById("highScores").reset();
-     alert("highScores has been reset!");
-  }
+function renderHighScores() {
+  highScoresList.replaceChildren();
+
+  getHighScores().forEach((score) => {
+    const listItem = document.createElement("li");
+    listItem.classList.add("high-score");
+    listItem.textContent = `${score.name} - ${score.score}`;
+    highScoresList.appendChild(listItem);
+  });
+}
+
+clearScoresBtn.addEventListener("click", () => {
+  localStorage.removeItem("highScores");
+  renderHighScores();
+});
+
+renderHighScores();

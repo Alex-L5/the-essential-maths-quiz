@@ -154,22 +154,19 @@ input::placeholder {
 /* Media query: Small devices (mobile phones and tablets, 320px and up) */
 @media screen and (max-width: 503px) {
     .btn {
-        padding: 1px;
-        height: 30px;
-        width: 30px;
-        margin: 3px;
-        border-radius: 20%;
+        width: min(90vw, 28rem);
+        min-height: 44px;
+        padding: 1rem;
+        font-size: 1.6rem;
     }
 }
 
 @media screen and (max-width: 425px) {
     .btn {
-        font-size: smaller;
-        padding: 1px;
-        height: 25px;
-        width: 25px;
-        margin: 2px;
-        border-radius: 20%;
+        width: min(90vw, 28rem);
+        min-height: 44px;
+        padding: 1rem;
+        font-size: 1.6rem;
     }
 }
 

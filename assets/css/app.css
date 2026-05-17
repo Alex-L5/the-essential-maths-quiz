@@ -121,6 +121,15 @@ h3 {
   transform: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
 /* Forms */
 form {
   width: 100%;

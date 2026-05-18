@@ -56,6 +56,18 @@ h3 {
     font-size: 2rem;
 }
 
+#menu {
+    font-size: 1.4rem;
+}
+
+#instructions {
+    font-size: 1.4rem;
+}
+
+#feedback-status {
+    font-size: 1.3rem;
+}
+
 /* Utilities */
 
 .container {

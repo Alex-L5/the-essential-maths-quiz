@@ -50,12 +50,37 @@ fetch(
 
         startGame();
     })
-    .catch((err) => {
+        .catch((err) => {
+
         console.error(err);
-        loader.classList.add('hidden');  //
-        game.classList.remove('hidden');
-        question.textContent = "Sorry, we couldn't load questions. Please try again later.";
-    });                                   //  
+ 
+        fetch('questions.json')
+
+            .then((res) => res.json())
+
+            .then((localQuestions) => {
+
+                questions = localQuestions;
+
+                startGame();
+
+            })
+
+            .catch((localErr) => {
+
+                console.error(localErr);
+
+                loader.classList.add('hidden');
+
+                game.classList.remove('hidden');
+
+                question.textContent = "Sorry, we couldn't load questions. Please try again later.";
+
+            });
+
+    });
+
+                                 //  
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
